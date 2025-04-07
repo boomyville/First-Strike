@@ -8,10 +8,10 @@ Ask the owner first
 https://git-scm.com/downloads
 
 # Open terminal in your desired parent directory
-git clone https://github.com/boomyville/First-Strike.git
+git clone https://github.com/boomyville/FirstStrike.git
 
 # Navigate to project directory (fix typo: First-Strike)
-cd First-Strike
+cd FirstStrike
 
 # Update local files with latest changes
 git pull
