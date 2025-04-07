@@ -1,5 +1,5 @@
 //==================================================================
-// First Sttrike
+// First Strike
 //==================================================================
 // This is a game where you control a missile launcher and try 
 // to shoot down incoming missiles. Defend those homes!
