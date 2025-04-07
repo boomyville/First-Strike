@@ -8,37 +8,42 @@
 // For COSC101 - Group Assignment
 // ===================================================================
 
-// Constants
-int screenWidth = 800; // Width of the screen
-int screenHeight = 600; // Height of the screen
+int screenWidth = 800;
+int screenHeight = 600;
 
-// Missile settings
-int radiusOfEnemyMissile = 6; // Radius of the enemy missile
-color colorOfEnemyMissile = color(255, 0, 0); // Color of the enemy missile
-int speedOfEnemyMissile = 2; // Speed of the enemy missile
-color colorOfPlayerMissile = color(0, 255, 0); // Color of the player missile
-int radiusOfPlayerMissile = 3; // Radius of the player missile
-int speedOfPlayerMissile = 5; // Speed of the player missile
+int radiusOfEnemyMissile = 6;
+color colorOfEnemyMissile = color(255, 0, 0);
+int speedOfEnemyMissile = 2;
+color colorOfPlayerMissile = color(0, 255, 0);
+int radiusOfPlayerMissile = 3;
+int speedOfPlayerMissile = 5;
 
-// Building settings
-int buildingWidth = 20; // Width of the building
-int buildingHeight = 50; // Height of the building
-int numberOfBuildings = 5; // Number of buildings
-int buildingSpacing = 50; // Spacing between buildings
-color buildingColor = color(255, 0, 0); // Color of the building
+int buildingWidth = 20;
+int buildingHeight = 50;
+int numberOfBuildings = 5;
+int buildingSpacing = 50;
+color buildingColor = color(255, 0, 0);
 
-// Player variables
-int playerMissileLauncherX; // X position of the player missile launcher
-int playerMissileLauncherY; // Y position of the player missile launcher
-int playerMissileLauncherWidth = 20; // Width of the player missile launcher
-int playerMissileLauncherHeight = 10; // Height of the player missile launcher
-color playerMissileLauncherColor = color(0, 255, 0); // Color of the player missile launcher
+int playerMissileLauncherX;
+int playerMissileLauncherY;
+int playerMissileLauncherWidth = 20;
+int playerMissileLauncherHeight = 10;
+color playerMissileLauncherColor = color(0, 255, 0);
 
-// Game variables
 boolean[] enemyMissilesActive = new boolean[10];
 float[] enemyMissilesX = new float[10];
 float[] enemyMissilesY = new float[10];
-
 boolean[] playerMissilesActive = new boolean[10];
 float[] playerMissilesX = new float[10];
 float[] playerMissilesY = new float[10];
+
+
+void setup() {
+  size(screenWidth, screenHeight); // Set the size of the window
+  playerMissileLauncherX = width / 2; // Center the missile launcher
+  playerMissileLauncherY = height - playerMissileLauncherHeight; // Position it at the bottom of the screen
+  for (int i = 0; i < enemyMissilesActive.length; i++) {
+    enemyMissilesActive[i] = false; // Initialize enemy missiles as inactive
+    playerMissilesActive[i] = false; // Initialize player missiles as inactive
+  }
+}
